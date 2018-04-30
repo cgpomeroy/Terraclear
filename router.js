@@ -10,14 +10,30 @@ export const Tabs = TabNavigator({
         screen: HeatMap,
         navigationOptions: {
             tabBarLabel: 'Heat Map',
-            tabBarIcon: <Icon name="wb-sunny" size={35} color="#FFCF5A" />
+            tabBarIcon: <Icon name="wb-sunny" size={35} color="#FFCF5A"/>
         },
     },
     Poly: {
         screen: Polygon,
         navigationOptions: {
             tabBarLabel: 'Draw a Polygon',
-            tabBarIcon: <Icon name="create" size={35} color='#FFCF5A' />
-        },
-    },
+            tabBarIcon: <Icon name="create" size={35} color='#FFCF5A'/>
+        }
+    }
+},
+    {
+        tabBarOptions : {
+            style: {
+                backgroundColor: 'gray',
+                //fontFamily: 'Montserrat, sans-serif'
+            }
+        }
 });
+
+Tabs.navigationOptions = {
+    header: {
+        style: {
+            backgroundColor: '#000000',
+        }
+    },
+};
